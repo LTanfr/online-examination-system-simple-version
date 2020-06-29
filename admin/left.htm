@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .leftTitle {
+            color: #fff;
+            background-image: url('Img/back_08.gif');
+            background-repeat: no-repeat;
+            width: 145px;
+            height: 20px;
+            margin: 3px auto;
+            font-size: 14px;
+            padding-top: 4px;
+            cursor: pointer;
+        }
+
+        .LeftTitleKuang {
+            border: 1px solid #599eff;
+            width: 145px;
+            margin: auto;
+        }
+
+        .LeftTitleList {
+            font-size: 14px;
+            height: 25px;
+            line-height: 25px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.LeftTitleKuang').hide();
+            $('.LeftTitleList').click(function () {
+                $('#center', parent.document).attr('src', $(this).attr('href'));
+            });
+            $('.leftTitle').click(function () {
+                $('.LeftTitleKuang').hide();
+                $(this).next().show();
+            });
+        });
+    </script>
+</head>
+<body leftmargin="0" topmargin="0" style="background-color:#fff;">
+    <div>
+        <div style="background-color:#b9b9b9;height:23px;width:100%;color:#fff;font-weight:900;font-size:12px;">
+            <font style="margin-top:25px;margin-left:15px;">后台管理</font>
+        </div>
+
+        <div class="leftTitle">
+            <font style="margin-left:10px;">学生信息管理</font>
+        </div>
+        <div class="LeftTitleKuang">
+            <div class="LeftTitleList" href="StudentInfo.aspx">□ 学生基本信息</div>
+            <div class="LeftTitleList" href="AddStudentInfo.aspx">□ 添加学生信息</div>
+        </div>
+
+        <div class="leftTitle">
+            <font style="margin-left:10px;">教师信息管理</font>
+        </div>
+        <div class="LeftTitleKuang">
+            <div class="LeftTitleList" href="TeacherInfo.aspx">□ 教师基本信息</div>
+            <div class="LeftTitleList" href="AddTeacherInfo.aspx">□ 添加教师信息</div>
+        </div>
+
+        <!--<div class="leftTitle">
+            <font style="margin-left:10px;">试题信息管理</font>
+        </div>
+        <div class="LeftTitleKuang">
+            <div class="LeftTitleList" href="ExaminationInfo.aspx">□ 试题基本信息</div>
+            <div class="LeftTitleList" href="AddExamination.aspx">□ 添加试题信息</div>
+        </div>-->
+
+        <div class="leftTitle">
+            <font style="margin-left:10px;">科目信息管理</font>
+        </div>
+        <div class="LeftTitleKuang">
+            <div class="LeftTitleList" href="Subject.aspx">□ 考试科目设置</div>
+        </div>
+
+        <!--<div class="leftTitle">
+            <font style="margin-left:10px;">考试结果管理</font>
+        </div>
+        <div class="LeftTitleKuang">
+            <div class="LeftTitleList" href="examinationResult.aspx">□ 考试结果</div>
+        </div>-->
+
+        <div class="leftTitle">
+            <font style="margin-left:10px;">管理员信息维护</font>
+        </div>
+        <div class="LeftTitleKuang">
+            <div class="LeftTitleList" href="AdminChangePwd.aspx">□ 修改密码</div>
+        </div>
+    </div>
+</body>
+</html>
